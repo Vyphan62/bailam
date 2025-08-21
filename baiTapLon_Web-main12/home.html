@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    </script>
+    <div class="banner">
+        <div class="">
+            <img class="banner-image" src="/images/background.jpg" alt="">
+        </div>
+        <div class="new-banner">
+            <h2 class="banner-title">New Arrivial</h2>
+            <h1 class="banner-content">Discover Our New Collection</h1>
+            <h3 class="banner-descriptin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium soluta ab
+                repudiandae fugit aperiam ad quibusdam! Ipsum autem temporibus, illo corporis harum eligendi, labore
+                veritatis, minus dicta ut delectus a.</h3>
+            <a href="shop.html" class="buy-btn">BUY NOW</a>
+        </div>
+    </div>
+    <div class="new-product">
+        <h1 class="title">
+            Browse the Range
+        </h1>
+        <h2 class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </h2>
+        <div class="product-wrap">
+            <div class="product-image-wrap">
+                <div>
+                    <img class="product-image" src="/images/product1.png" alt="">
+                    <h1>Dining</h1>
+                </div>
+                <div>
+                    <img class="product-image" src="/images/Image-living room (1).png" alt="">
+                    <h1>Living</h1>
+                </div>
+                <div>
+                    <img class="product-image" src="/images/Mask Group.png" alt="">
+                    <h1>Bedroom</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="our-product">
+        <h1 class="our-product-title">
+            Our Products
+        </h1>
+
+        <div class="our-product-image" id="our-product-image"></div>
+
+        <div class="more-btn-container">
+            <a class="more-btn" href="shop.html">Show more</a>
+        </div>
+
+    </div>
+
+    <div class="header-3">
+
+        <section class="room-inspiration">
+            <div class="room-wrap" id="room-wrap">
+                <div class="room-left">
+                    <span>50+ Beautiful rooms<br> inspiration</span>
+                    <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
+                    <button class="explore-btn">Explore More</button>
+                </div>
+
+                <div class="room-right">
+                    <div class="room-slider-wrapper">
+                        <div class="room-slider">
+                            <!-- Slide 1 -->
+                            <div class="room-card">
+                                <img src="images/Image.png" alt="Room 1" />
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="room-card2">
+                                <img src="images/Rectangle 25.png" alt="Room 2" />
+
+                                <!-- Dot indicator -->
+                                <div class="slider-dots">
+                                    <span class="dot dot-active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="room-card">
+                                <img src="images/Rectangle 40.png" alt="Room 3" />
+                            </div>
+
+                            <div class="room-card">
+                                <img src="images/Rectangle 43.png" alt="Room 4" />
+                            </div>
+
+                            <div class="room-card">
+                                <img src="images/Rectangle 45.png" alt="Room 5" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button class="room-arrow right" id="arrow-right">
+                <img src="images/Group 13.png" alt="Next" />
+            </button>
+            <button class="room-arrow left" id="arrow-left">
+                <img style="transform: rotate(180deg)" src="images/Group 13.png" alt="Next" />
+            </button>
+        </section>
+
+    </div>
+    
+    <div class="setuphinh">
+        <div class="text-h3" style="text-align: center;">
+            <h2>Share your setup with</h2>
+            <div class="hashtag">#FuniroFurniture</div>
+        </div>
+        <section class="gallery">
+            <div class="khung1">
+                <img class="hinh1" src="images/Rectangle 36 (1).png" alt="">
+                <img class="hinh2" src="images/Rectangle 38.png" alt="">
+            </div>
+            <div class="khung2">
+                <img class="hinh3" src="images/Rectangle 40.png" alt="">
+            </div>
+            <div class="khung3">
+                <img class="hinh4" src="images/Rectangle 43.png" alt="">
+                <img class="hinh5" src="images/Rectangle 45.png" alt="">
+               
+            </div>
+            <div class="khung4">
+                <img class="hinh6" src="images/Rectangle 37.png" alt="">
+                <img class="hinh7" src="images/Rectangle 39.png" alt="">
+            </div>
+            <div class="khung5">
+                <img class="hinh8" src="images/Rectangle 41.png" alt="">
+                <img class="hinh9"src="images/Rectangle 44.png" alt="">
+            </div>
+            
+        </section>
+    </div>
+</div>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <script>
+        const slide = document.getElementById('room-wrap')
+        const right = document.getElementById('arrow-right')
+        const left = document.getElementById('arrow-left')
+        right.addEventListener('click', (e) => {
+            slide.scrollBy({ left: 600, behavior: "smooth" })
+        })
+        left.addEventListener('click', (e) => {
+            slide.scrollBy({ left: -600, behavior: "smooth" })
+        })
+        const showhide =()=>{
+            if(slide.scrollLeft>100){
+                left.style.display = "block"
+            }else{
+                left.style.display="none"
+            }
+        }
+        slide.addEventListener('scroll',showhide)
+        let itemlist = [
+            {
+                image: "/images/product-1.png",
+                name: "Syltherine",
+                type: "Stylish cafe chair",
+                price: 2500000,
+                disprice: 3500000,
+                sale: -30,
+
+            },
+            {
+                image: "/images/product-2.png",
+                name: "Leviosa",
+                type: "Stylish cafe chair",
+                price: 2500000,
+                disprice: "",
+                sale: "",
+            }, {
+                image: "/images/product-3.png",
+                name: "Lolito",
+                type: "Luxury big sofa",
+                price: 7000000,
+                disprice: 14000000,
+                sale: -50,
+
+            }, {
+                image: "/images/product-4.png",
+                name: "Respira",
+                type: "Outdoor bar table and stool",
+                price: 500000,
+                sale: "New",
+
+            }, {
+                image: "/images/product-5.png",
+                name: "Grifo",
+                type: "Night lamp",
+                price: 1500000,
+                sale: "",
+
+            }, {
+                image: "/images/product-6.png",
+                name: "Muggo",
+                type: "Small mug",
+                price: 150000,
+                sale: "New",
+
+            },
+            {
+                image: "/images/product-7.png",
+                name: "Pingky",
+                type: "Cute bed set",
+                price: 7000000,
+                disprice: 14000000,
+                sale: -50,
+            },
+            {
+                image: "/images/product-8.png",
+                name: "Potty",
+                type: "Minimalist flower pot",
+                price: 500000,
+                sale: " New",
+
+            }]
+
+
+        let src = document.getElementById("our-product-image")
+
+        itemlist.map(((x, i) => {
+
+            //format gia
+            let priceFormatted = x.price.toLocaleString("vi-VN");
+            let dispriceFormatted = x.disprice ? x.disprice.toLocaleString("vi-VN") : "";
+            //chinh phan tram gia
+            let saleBadge = "";
+            if (x.sale) {
+                if (typeof x.sale === "string" && x.sale.trim().toLowerCase() === "new") {
+                    saleBadge = `<div class="bubble new"><h5>New</h5></div>`;
+                }
+                else if (!isNaN(x.sale)) {
+                    saleBadge = `<div class="bubble sale"><h5>${x.sale}%</h5></div>`;
+                }
+            }
+            //disprice không có thì ẩn
+            let dispriceHTML = dispriceFormatted
+                ? `<h3 class="dis-price">Rp ${dispriceFormatted}</h3>`
+                : "";
+            src.innerHTML += `    <div class="product-content">
+            <div class="product-main">
+                <div class="o-san-pham" style="display: flex; flex-direction: column;">
+                    <div style="position: relative">
+                        <img class="image" src="${x.image}" alt="">
+                        ${saleBadge}
+                    </div>
+                    <div class="content">
+                        <h1 class="name">${x.name}</h1>
+                        <h2 class="type">${x.type}</h2>
+                        <div class="price">   <h3 class="real-price">Rp ${priceFormatted}</h3>
+                        ${dispriceHTML}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="more-info">
+               <a href="cart.html" class="addcart-btn" onclick="addToCart('${x.name}', ${x.price}, '${x.image}')">add to cart</a>
+              <div class="more-info-bottom">
+                <a class="info-link" href="#"><img src="/images/Frame 11.png" alt=""></a>
+                <a class="info-link" href="#"><img src="/images/Frame 12.png" alt=""></a>
+                <a class="info-link" href="#"><img src="/images/Frame 10.png" alt=""></a>
+              </div>
+            </div>
+          </div>`;
+        }))
+
+  </script>
+  <script>
+  const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.getAttribute("data-name");
+      const price = parseInt(button.getAttribute("data-price"));
+      const image = button.getAttribute("data-image");
+
+      const product = {
+        name,
+        price,
+        image,
+        quantity: 1
+      };
+
+      // Lấy giỏ hàng hiện tại (nếu có)
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Kiểm tra nếu sản phẩm đã tồn tại → tăng số lượng
+      const existingProduct = cart.find(item => item.name === product.name);
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push(product);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Chuyển sang trang giỏ hàng
+      window.location.href = "cart.html";
+    });
+  });
+
+
+  function attachAddToCartEvents() {
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+    addToCartButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+        const price = parseInt(button.getAttribute("data-price"));
+        const image = button.getAttribute("data-image");
+
+        const product = { name, price, image, quantity: 1 };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const existingProduct = cart.find(item => item.name === product.name);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push(product);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // 👉 Sau khi thêm vào cart, chuyển qua trang cart
+        window.location.href = "cart.html";
+      });
+    });
+  }
+
+//Thêm và cart
+  function addToCart(name, price, image) {
+    const product = {
+      name,
+      price,
+      image,
+      quantity: 1
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find(item => item.name === product.name);
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Chuyển sang trang giỏ hàng
+    window.location.href = "cart.html";
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cartIcon = document.getElementById("cart-icon");
+    const cartPopup = document.getElementById("cart-popup");
+    const closeCart = document.getElementById("close-cart");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartSubtotal = document.getElementById("cart-subtotal");
+
+    function renderCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cartItemsContainer.innerHTML = "";
+        let subtotal = 0;
+
+        cart.forEach(item => {
+            subtotal += item.price * item.quantity;
+            cartItemsContainer.innerHTML += `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="">
+                    <div class="item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.quantity} x Rs. ${item.price.toLocaleString()}</p>
+                    </div>
+                </div>
+            `;
+        });
+
+        cartSubtotal.textContent = "Rs. " + subtotal.toLocaleString();
+    }
+
+    cartIcon.addEventListener("click", () => {
+        renderCart();
+        cartPopup.classList.add("active");
+    });
+
+    closeCart.addEventListener("click", () => {
+        cartPopup.classList.remove("active");
+    });
+});
+</script>
+
+
+</body>
+
+</html>

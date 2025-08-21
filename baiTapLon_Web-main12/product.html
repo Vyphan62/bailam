@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    </script>
+
+    <div class="breadcrumb">
+        <span><a href="home.html">Home </a> &gt; <a href="shop.html">Shop </a> &gt; <strong> | Asgaard sofa</strong></span>
+    </div>
+
+    <main class="product-page">
+        <section class="product-images">
+            <div class="thumbs">
+                <img src="images/Outdoor sofa set 2.png" onclick="showImage('images/Outdoor sofa set 2.png')" alt="thumb 1">
+                <img src="images/Outdoor sofa set_2 1.png" onclick="showImage('images/Outdoor sofa set_2 1.png')" alt="thumb 2">
+                <img src="images/Stuart sofa 1.png" onclick="showImage('images/Stuart sofa 1.png')" alt="thumb 3">
+                <img src="images/Maya sofa three seater (1) 1.png" onclick="showImage('images/Maya sofa three seater (1) 1.png')" alt="thumb 4">
+            </div>
+            <div class="main-image">
+                <img id="mainImg" src="images/Asgaard sofa 5.png" alt="">
+            </div>
+        </section>
+
+        <section class="product-infor">
+            <h1>Asgaard sofa</h1>
+            <p class="price">Rs. 250,000.0</p>
+            <div class="rating">
+                <span><img src="images/star.png" alt=""></span>
+                <span><img src="images/star.png" alt=""></span>
+                <span><img src="images/star.png" alt=""></span>
+                <span><img src="images/star.png" alt=""></span>
+                <span><img src="images/star.png" alt=""></span>
+                <span> | 5 Cuntomer Review</span>
+            </div>
+            <p class="short-text">
+                Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+            </p>
+
+            <div class="options">
+                <div class="option-block">
+                    <p>Size</p>
+                    <div class="inline-buttons">
+                        <button class="size-btn selected" style="background-color: #B88E2F;">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XS</button>
+                    </div>
+                </div>
+
+                <div class="option-block">
+                    <p>Color</p>
+                    <div class="inline-buttons"></div>
+                        <button class="color-btn" style="background-color: #816DFA;"></button>
+                        <button class="color-btn" style="background-color: #000000;"></button>
+                        <button class="color-btn" style="background-color: #B88E2F;"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <div class="quantity">
+                        <button id="decrease">-</button>
+                        <input type="number" id="quantity-input" value="1" readonly>
+                        <button id="increase">+</button>
+                </div>
+                <a href="cart.html">
+                    <button class="btn-primary">Add To Cart</button>
+                </a>
+                <button class="btn-outline">+ Compare</button>
+            </div>
+
+            <div class="tags">
+                <p>SKU       : SS001</p>
+                <p>Category  : Sofas</p>
+                <p>Tags      : Sofa,Chair,Home,Shop</p>
+            </div>
+
+            <div class="share">
+                <p>Share     :</p>
+                <span><img src="images/akar-icons_facebook-fill.png" alt=""></span>
+                    <span><img src="images/akar-icons_linkedin-box-fill.png" alt=""></span>
+                    <span><img src="images/ant-design_twitter-circle-filled.png" alt="">
+                </span>
+            </div>
+        </section>
+    </main>
+
+    <section class="tabs">
+        <div class="tab-menu">
+            <button class="tab active">Description</button>
+            <button class="tab">Additional Information</button>
+            <button class="tab">Reviews [5]</button>
+        </div>
+        <div class="tab-content-active">
+            <p>
+               Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+            </p>
+            <p>
+                Weighing in under 7 pounds, the Kilburn is a lightweight oiece of vintage styled engineering. Setting the bar as one of the loudest
+                speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boats a clear midrange
+                and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls
+                to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
+            </p>
+        </div>
+    </section>
+
+    <div class="bottom-images">
+        <img src="images/Cloud sofa three seater + ottoman_2 1.png" alt="">
+        <img src="images/Cloud sofa three seater + ottoman_1 1.png" alt="">
+    </div>
+
+    <div class="our-product">
+        <h1 class="our-product-title">
+            Related Products
+        </h1>
+
+        <div class="our-product-image" id="our-product-image"></div>
+
+      <div class="more-btn-container">
+        <a class="more-btn" href ="shop.html">Show more</a>
+    </div>
+
+   <div id="footer"></div>
+
+      <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <script>
+        let itemlist = [
+            {
+                image: "/images/product-1.png",
+                name: "Syltherine",
+                type: "Stylish cafe chair",
+                price: 2500000,
+                disprice: 3500000,
+                sale: -30,
+
+            },
+            {
+                image: "/images/product-2.png",
+                name: "Leviosa",
+                type: "Stylish cafe chair",
+                price: 2500000,
+                disprice: "",
+                sale: "",
+            }, {
+                image: "/images/product-3.png",
+                name: "Lolito",
+                type: "Luxury big sofa",
+                price: 7000000,
+                disprice: 14000000,
+                sale: -50,
+
+            }, {
+                image: "/images/product-4.png",
+                name: "Respira",
+                type: "Outdoor bar table and stool",
+                price: 500000,
+                sale: "New",
+            }]
+
+             let src = document.getElementById("our-product-image")
+
+        itemlist.map(((x, i) => {
+
+            //format gia
+            let priceFormatted = x.price.toLocaleString("vi-VN");
+            let dispriceFormatted = x.disprice ? x.disprice.toLocaleString("vi-VN") : "";
+            //chinh phan tram gia
+            let saleBadge = "";
+            if (x.sale) {
+                if (typeof x.sale === "string" && x.sale.trim().toLowerCase() === "new") {
+                    saleBadge = `<div class="bubble new"><h5>New</h5></div>`;
+                }
+                else if (!isNaN(x.sale)) {
+                    saleBadge = `<div class="bubble sale"><h5>${x.sale}%</h5></div>`;
+                }
+            }
+            //disprice không có thì ẩn
+            let dispriceHTML = dispriceFormatted
+                ? `<h3 class="dis-price">Rb ${dispriceFormatted}</h3>`
+                : "";
+            src.innerHTML += `    <div class="product-content">
+            <div class="product-main">
+                <div style="display: flex; flex-direction: column;">
+                    <div style="position: relative">
+                        <img class="image" src="${x.image}" alt="">
+                    ${saleBadge}
+                    </div>
+                    <div class="content">
+                        <h1 class="name">${x.name}</h1>
+                        <h2 class="type">${x.type}</h2>
+                        <div class="price">   <h3 class="real-price">Rb ${priceFormatted}</h3>
+                        ${dispriceHTML}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="more-info">
+                <a href="cart.html" class="addcart-btn" onclick="addToCart('${x.name}', ${x.price}, '${x.image}')">add to cart</a>
+
+                <div class="more-info-bottom">
+                    <a class="info-link" href="#"><img src="/images/Frame 11.png" alt=""></a>
+                    <a class="info-link" href="#"><img src="/images/Frame 12.png" alt=""></a>
+                   <a class="info-link" href="#"><img src="/images/Frame 10.png" alt=""></a>
+                </div>
+            </div>
+        </div>`
+        }))
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const quantityInput = document.getElementById("quantity-input");
+        const decreaseBtn = document.getElementById("decrease");
+        const increaseBtn = document.getElementById("increase");
+
+        decreaseBtn.addEventListener("click", () => {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+            }
+        });
+
+        increaseBtn.addEventListener("click", () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+        });
+    });
+
+    //Chuyển ảnh
+        function showImage(src) {
+        document.getElementById('mainImg').src = src;
+        }
+
+        function addToCart(name, price, image) {
+    // Lấy mảng giỏ hàng hiện tại từ localStorage hoặc tạo mới
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Kiểm tra sản phẩm đã có trong giỏ hàng chưa
+    let index = cart.findIndex(item => item.name === name);
+    if (index > -1) {
+        // Nếu có rồi thì tăng số lượng
+        cart[index].quantity += 1;
+    } else {
+        // Nếu chưa thì thêm mới
+        cart.push({name: name, price: price, image: image, quantity: 1});
+    }
+
+    // Lưu lại vào localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Lấy tất cả các tab và nội dung tab
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    // Bỏ class active ở tất cả tab và nội dung
+    tabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(tc => tc.classList.remove('active'));
+
+    // Thêm class active cho tab được click và nội dung tương ứng
+    tab.classList.add('active');
+    tabContents[index].classList.add('active');
+  });
+});
+
+    </script>
+</body>
+</html>
